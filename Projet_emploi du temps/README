@@ -1,0 +1,23 @@
+Scheduler Project - Moteur d'Ordonnancement sous Contraintes
+
+Fait par : ALLA Sofiane et trois autres étudiants qui se reconnaitront et dont je préfère ne pas divulguer le nom par principe
+
+Ce projet Java permet de modéliser, vérifier et générer des emplois du temps automatisés en respectant diverses contraintes temporelles.
+
+	Fonctionnalités :
+1.Gestion des activités :modélisation de tâches possédant une description et une durée fixe.
+
+2. Système de contraintes : le moteur supporte plusieurs types de contraintes pour lier les activités entre elles :
+- PrecedenceConstraint : Une activité doit se terminer avant le début d'une autre
+- MeetConstraint : Une activité doit commencer exactement au moment où la précédente s'achève.
+- MaxSpanConstraint : Définit une durée maximale pour réaliser un ensemble de tâches.
+- PrecedenceConstraintWithGap : Ajoute un délai (min/max) entre deux activités liées par une précédence
+
+3. Algorithmes de résolution : le projet propose deux stratégies pour trouver un planning valide :
+- Random Search (RandomScheduler) : Un algorithme stochastique qui effectue des tirages aléatoires et conserve la solution minimisant le nombre de contraintes violées.
+- Tri Topologique (TopologicalSorter) : Un algorithme déterministe basé sur la théorie des graphes pour ordonner les tâches de manière séquentielle sans conflit.
+
+	Structure du projet:
+constraints : Contient l'interface Constraint et ses différentes implémentations (Binary, MaxSpan, etc.)
+solvers : Regroupe les moteurs de résolution et la classe de vérification
+Exe.java : Classe principale de démonstration simulant un emploi du temps quotidien (cours de maths, révisions, loisirs)
