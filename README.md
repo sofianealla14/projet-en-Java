@@ -7,4 +7,4 @@ Introduction au langage de programmation Java via deux projet (un projet d'agenc
 Objectifs :
 - se familiariser avec Java
 - comprendre les enjeux de ce langage
-- travailler sur des projets e autonomie
+- travailler sur des projets en autonomie
